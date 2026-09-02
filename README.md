@@ -58,7 +58,7 @@ Wallet-native mining game with GPU infrastructure, upgrades, degradation and rep
 ## Contribution game
 
 <p align="center">
-  <img src="./assets/contribution-game.svg" width="100%" alt="A cell-based contribution snake that eats one point at a time, grows, bites its tail, shows Game Over and restarts" />
+  <img src="./assets/contribution-game.svg" width="100%" alt="A full-board contribution snake that eats one point at a time, grows to 241 cells, collides with its tail, shows Game Over and restarts" />
 </p>
 
 <p align="center">

@@ -7,7 +7,7 @@ $snake = Get-Content -Raw -Encoding utf8 $snakePath
 
 [xml]$snake | Out-Null
 $foodCount = [regex]::Matches($snake, 'id="food-\d+"').Count
-if ($snake -notmatch 'data-step-snake="true"' -or $snake -notmatch 'calcMode="discrete"' -or $foodCount -ne 14 -or $snake -notmatch 'SELF-BITE' -or $snake -notmatch 'dur="20s"') { throw "Cell snake cycle is incomplete" }
+if ($snake -notmatch 'data-step-snake="true"' -or $snake -notmatch 'calcMode="discrete"' -or $foodCount -ne 236 -or $snake -notmatch 'SELF COLLISION' -or $snake -notmatch 'SCORE 023600' -or $snake -notmatch 'dur="38s"') { throw "Cell snake cycle is incomplete" }
 if ($readme -notmatch "trap-banner-v10\.webp" -or $readme -notmatch "contribution-game\.svg") { throw "README asset links are stale" }
 
 $bytes = [IO.File]::ReadAllBytes($bannerPath)
@@ -22,4 +22,4 @@ while ($pos + 8 -le $bytes.Length) {
 if ($chunks.Count -lt 100) { throw "Banner loop is incomplete" }
 if ($bytes.Length -gt 5MB) { throw "Banner is too large for the profile" }
 
-"Profile assets OK: $($chunks.Count)-frame banner loop, discrete cell snake with sequential food"
+"Profile assets OK: $($chunks.Count)-frame banner loop, 236-food snake grows to 241 and self-collides"
