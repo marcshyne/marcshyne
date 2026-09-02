@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/header.svg" width="100%" alt="Marc Shyne — 4L" />
+  <img src="./assets/trap-banner.webp" width="100%" alt="Marc Shyne — 4L & Get Money Music" />
 </p>
 
 <p align="center">
