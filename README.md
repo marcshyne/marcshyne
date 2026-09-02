@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/trap-banner-v7.webp" width="100%" alt="Marc Shyne — 4L" />
+  <img src="./assets/trap-banner-v8.webp" width="100%" alt="Marc Shyne — 4L" />
 </p>
 
 <p align="center">
