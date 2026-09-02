@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/trap-banner-v3.webp" width="100%" alt="Marc Shyne — 4L" />
+  <img src="./assets/trap-banner-v4.webp" width="100%" alt="Marc Shyne — 4L" />
 </p>
 
 <p align="center">
@@ -58,7 +58,7 @@ Wallet-native mining game with GPU infrastructure, upgrades, degradation and rep
 ## Contribution game
 
 <p align="center">
-  <img src="./assets/contribution-game.svg" width="100%" alt="A contribution snake that eats, grows, bites its tail, shows Game Over and restarts" />
+  <img src="./assets/contribution-game.svg" width="100%" alt="A cell-based contribution snake that eats one point at a time, grows, bites its tail, shows Game Over and restarts" />
 </p>
 
 <p align="center">
