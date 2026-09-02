@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">4L contribution snake — one life</title>
+  <desc id="desc">A blue snake eats contribution cells, grows, bites its own tail and stops on Game Over</desc>
+  <style>
+    .label{font-family:Arial,Helvetica,sans-serif;letter-spacing:3px}
+    @media (prefers-reduced-motion:reduce){.motion{display:none}.final{opacity:1!important}}
+  </style>
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#075CFF"/><stop offset=".5" stop-color="#00AEEF"/><stop offset="1" stop-color="#7DEBFF"/>
+    </linearGradient>
+    <radialGradient id="head">
+      <stop stop-color="#E7FCFF"/><stop offset=".34" stop-color="#6EE7FF"/><stop offset="1" stop-color="#0788FF"/>
+    </radialGradient>
+    <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <rect x="2" y="2" width="15" height="15" rx="3" fill="#0A1523" stroke="#10263C"/>
+    </pattern>
+    <filter id="glow" x="-40%" y="-60%" width="180%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="11"/></filter>
+    <path id="route" pathLength="1000" d="M52 56H340V96H90V136H1030V176H420V216H920C1040 216 1070 128 984 96C902 66 824 109 850 164C871 207 950 187 932 136C920 105 875 113 880 146"/>
+  </defs>
+
+  <rect width="1200" height="300" rx="24" fill="#03070D"/>
+  <rect x="22" y="22" width="1156" height="216" rx="15" fill="url(#grid)" stroke="#10263C"/>
+  <text x="42" y="272" class="label" font-size="12" fill="#52708B">CONTRIBUTION RUN // ONE LIFE</text>
+  <text x="1158" y="272" class="label" font-size="12" fill="#22D3EE" text-anchor="end">4L</text>
+
+  <g class="motion" fill="#67E8F9" filter="url(#glow)">
+    <g transform="translate(182 49)"><rect width="14" height="14" rx="4"><animate attributeName="opacity" values="1;1;0" keyTimes="0;.1;1" begin=".45s" dur=".22s" fill="freeze"/></rect></g>
+    <g transform="translate(304 49)"><rect width="14" height="14" rx="4"><animate attributeName="opacity" values="1;1;0" keyTimes="0;.1;1" begin="1.05s" dur=".22s" fill="freeze"/></rect></g>
+    <g transform="translate(236 89)"><rect width="14" height="14" rx="4"><animate attributeName="opacity" values="1;1;0" keyTimes="0;.1;1" begin="2.05s" dur=".22s" fill="freeze"/></rect></g>
+    <g transform="translate(100 89)"><rect width="14" height="14" rx="4"><animate attributeName="opacity" values="1;1;0" keyTimes="0;.1;1" begin="2.75s" dur=".22s" fill="freeze"/></rect></g>
+    <g transform="translate(310 129)"><rect width="14" height="14" rx="4"><animate attributeName="opacity" values="1;1;0" keyTimes="0;.1;1" begin="3.55s" dur=".22s" fill="freeze"/></rect></g>
+    <g transform="translate(570 129)"><rect width="14" height="14" rx="4"><animate attributeName="opacity" values="1;1;0" keyTimes="0;.1;1" begin="4.45s" dur=".22s" fill="freeze"/></rect></g>
+    <g transform="translate(890 129)"><rect width="14" height="14" rx="4"><animate attributeName="opacity" values="1;1;0" keyTimes="0;.1;1" begin="5.5s" dur=".22s" fill="freeze"/></rect></g>
+    <g transform="translate(826 169)"><rect width="14" height="14" rx="4"><animate attributeName="opacity" values="1;1;0" keyTimes="0;.1;1" begin="6.7s" dur=".22s" fill="freeze"/></rect></g>
+    <g transform="translate(586 169)"><rect width="14" height="14" rx="4"><animate attributeName="opacity" values="1;1;0" keyTimes="0;.1;1" begin="7.55s" dur=".22s" fill="freeze"/></rect></g>
+    <g transform="translate(448 209)"><rect width="14" height="14" rx="4"><animate attributeName="opacity" values="1;1;0" keyTimes="0;.1;1" begin="8.45s" dur=".22s" fill="freeze"/></rect></g>
+    <g transform="translate(680 209)"><rect width="14" height="14" rx="4"><animate attributeName="opacity" values="1;1;0" keyTimes="0;.1;1" begin="9.2s" dur=".22s" fill="freeze"/></rect></g>
+    <g transform="translate(908 209)"><rect width="14" height="14" rx="4"><animate attributeName="opacity" values="1;1;0" keyTimes="0;.1;1" begin="9.85s" dur=".22s" fill="freeze"/></rect></g>
+    <g transform="translate(1008 126)"><rect width="14" height="14" rx="4"><animate attributeName="opacity" values="1;1;0" keyTimes="0;.1;1" begin="10.55s" dur=".22s" fill="freeze"/></rect></g>
+    <g transform="translate(894 94)"><rect width="14" height="14" rx="4"><animate attributeName="opacity" values="1;1;0" keyTimes="0;.1;1" begin="11.2s" dur=".22s" fill="freeze"/></rect></g>
+  </g>
+
+  <g class="motion">
+    <use href="#route" fill="none" stroke="#0077FF" stroke-width="29" stroke-linecap="round" stroke-linejoin="round" opacity=".38" filter="url(#soft)" stroke-dasharray="0 1000">
+      <animate attributeName="stroke-dasharray" from="0 1000" to="1000 0" dur="12s" fill="freeze"/>
+      <animate attributeName="opacity" from=".38" to=".1" begin="12.1s" dur=".5s" fill="freeze"/>
+    </use>
+    <use href="#route" fill="none" stroke="url(#body)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0 1000">
+      <animate attributeName="stroke-dasharray" from="0 1000" to="1000 0" dur="12s" fill="freeze"/>
+      <animate attributeName="opacity" from="1" to=".3" begin="12.1s" dur=".5s" fill="freeze"/>
+    </use>
+    <g filter="url(#glow)">
+      <circle r="13" fill="url(#head)"/>
+      <circle cx="4" cy="-4" r="2" fill="#03101D"/>
+      <circle cx="4" cy="4" r="2" fill="#03101D"/>
+      <animateMotion dur="12s" rotate="auto" fill="freeze"><mpath href="#route"/></animateMotion>
+      <animate attributeName="opacity" from="1" to="0" begin="12.08s" dur=".2s" fill="freeze"/>
+    </g>
+  </g>
+
+  <g class="motion" opacity="0" transform="translate(880 146)" fill="none" stroke="#7DEBFF" filter="url(#glow)">
+    <circle r="12" stroke-width="4"><animate attributeName="r" from="12" to="55" begin="12s" dur=".65s" fill="freeze"/><animate attributeName="opacity" values="0;1;0" begin="12s" dur=".65s" fill="freeze"/></circle>
+    <path d="M-22 0H22M0-22V22M-16-16L16 16M16-16L-16 16" stroke-width="3"><animate attributeName="opacity" values="0;1;0" begin="12s" dur=".55s" fill="freeze"/></path>
+  </g>
+
+  <g class="final" opacity="0">
+    <rect x="22" y="22" width="1156" height="216" rx="15" fill="#02060B" fill-opacity=".9"/>
+    <text x="600" y="119" class="label" font-size="52" font-weight="900" fill="#FFFFFF" text-anchor="middle">GAME OVER</text>
+    <text x="600" y="158" class="label" font-size="14" fill="#22D3EE" text-anchor="middle">SELF-BITE // FINAL SCORE 140</text>
+    <rect x="490" y="181" width="220" height="3" rx="2" fill="url(#body)"/>
+    <animate attributeName="opacity" from="0" to="1" begin="12.35s" dur=".65s" fill="freeze"/>
+  </g>
+</svg>

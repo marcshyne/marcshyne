@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/trap-banner.webp" width="100%" alt="Marc Shyne — 4L & Get Money Music" />
+  <img src="./assets/trap-banner-v2.webp" width="100%" alt="Marc Shyne — 4L" />
 </p>
 
 <p align="center">
@@ -55,13 +55,11 @@ Wallet-native mining game with GPU infrastructure, upgrades, degradation and rep
   <img src="https://skillicons.dev/icons?i=ts,python,rust,react,nextjs,fastapi,postgres,redis,docker,git&theme=dark&perline=10" alt="TypeScript, Python, Rust, React, Next.js, FastAPI, PostgreSQL, Redis, Docker and Git" />
 </p>
 
-## Contribution flow
+## One-life contribution game
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/marcshyne/marcshyne/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/marcshyne/marcshyne/output/github-snake.svg" />
-  <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/marcshyne/marcshyne/output/github-snake-dark.svg" />
-</picture>
+<p align="center">
+  <img src="./assets/contribution-game.svg" width="100%" alt="A contribution snake that eats, grows, bites its tail and stops on Game Over" />
+</p>
 
 <p align="center">
   <a href="https://t.me/marcshyne"><strong>MAKE SOMETHING MOVE →</strong></a>
