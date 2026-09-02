@@ -1,68 +1,65 @@
 <p align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:6E40C9,50:8B5CF6,100:22D3EE&height=190&section=header&text=Marc%20Shyne&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=34&desc=AI%20AUTOMATION%20%E2%80%A2%20TELEGRAM%20SYSTEMS%20%E2%80%A2%20PRODUCT%20UI&descSize=16&descAlignY=55" alt="Marc Shyne" />
+  <img src="./assets/header.svg" width="100%" alt="Marc Shyne — building systems that move" />
 </p>
 
 <p align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=21&pause=1100&color=A78BFA&center=true&vCenter=true&repeat=true&random=false&width=660&lines=Building+automation-heavy+digital+products;Turning+messy+workflows+into+working+systems;Python+%C2%B7+TypeScript+%C2%B7+Telegram+%C2%B7+AI" alt="Typing SVG" />
-  </a>
+  <a href="https://t.me/marcshyne"><img src="https://img.shields.io/badge/TALK-@marcshyne-00AEEF?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" /></a>
+  <a href="https://xgen-ui.vercel.app"><img src="https://img.shields.io/badge/SHIP-xgen--ui-07111F?style=for-the-badge&logo=vercel&logoColor=22D3EE" alt="xgen-ui live demo" /></a>
+  <img src="https://komarev.com/ghpvc/?username=marcshyne&label=SIGNAL&color=0284C7&style=for-the-badge" alt="Profile views" />
 </p>
 
-<p align="center">
-  <a href="https://t.me/marcshyne"><img src="https://img.shields.io/badge/Telegram-@marcshyne-229ED9?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" /></a>
-  <img src="https://komarev.com/ghpvc/?username=marcshyne&color=8B5CF6&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile views" />
-</p>
-
----
-
-## About
+<p align="center"><code>build → automate → ship → repeat</code></p>
 
 <table>
 <tr>
-<td width="50%">
+<td width="33%" valign="top">
 
-**EN**
+### 01 / AUTOMATE
 
-I build practical products at the intersection of **AI automation**, **Telegram systems**, and **web interfaces**. I care about shipping useful workflows, clean operator experiences, and infrastructure that survives real usage.
+AI-assisted operations and agent workflows that remove repetitive work.
 
 </td>
-<td width="50%">
+<td width="33%" valign="top">
 
-**RU**
+### 02 / CONNECT
 
-Собираю практичные продукты на стыке **AI-автоматизации**, **Telegram-систем** и **веб-интерфейсов**. Ценю рабочие процессы, понятный опыт оператора и инфраструктуру, которая выдерживает реальную эксплуатацию.
+Telegram systems, account tooling, and reliable background infrastructure.
+
+</td>
+<td width="33%" valign="top">
+
+### 03 / SHIP
+
+Product interfaces that make complex machinery feel simple to operate.
 
 </td>
 </tr>
 </table>
 
-## Current focus
-
-- AI-assisted operations and agent workflows
-- Telegram automation and account-management tooling
-- Product interfaces that make complex systems simple to run
-
-## Stack
+### TOOLBOX
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=python,ts,react,vite,tailwind,fastapi,postgres,redis,docker,git&theme=dark&perline=10" alt="Python, TypeScript, React, Vite, Tailwind, FastAPI, PostgreSQL, Redis, Docker and Git" />
 </p>
 
-## Featured work
+### CURRENT SIGNAL
 
-### [xgen-ui](https://github.com/marcshyne/xgen-ui)
+```text
+NOW BUILDING   automation-heavy digital products
+BASED IN       Saint Petersburg
+MODE           shipping > talking
+```
 
-React + TypeScript interface experiments built with Vite and Tailwind CSS.
+### SELECTED BUILD
 
-[Repository](https://github.com/marcshyne/xgen-ui) · [Live demo](https://xgen-ui.vercel.app)
+<a href="https://github.com/marcshyne/xgen-ui"><img src="https://github-readme-stats.vercel.app/api/pin/?username=marcshyne&repo=xgen-ui&theme=transparent&hide_border=true&title_color=22D3EE&text_color=94A3B8&icon_color=0284C7" alt="xgen-ui repository" /></a>
 
----
+### CONTRIBUTION FLOW
 
-<p align="center">
-  <strong>Open to useful conversations and ambitious builds.</strong><br />
-  <a href="https://t.me/marcshyne">Message me on Telegram</a>
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/marcshyne/marcshyne/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/marcshyne/marcshyne/output/github-snake.svg" />
+  <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/marcshyne/marcshyne/output/github-snake-dark.svg" />
+</picture>
 
-<p align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:6E40C9,50:8B5CF6,100:22D3EE&height=105&section=footer" alt="Footer" />
-</p>
+<p align="right"><sub>4L // BUILT TO MOVE</sub></p>
