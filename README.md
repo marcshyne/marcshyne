@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/trap-banner-v2.webp" width="100%" alt="Marc Shyne — 4L" />
+  <img src="./assets/trap-banner-v3.webp" width="100%" alt="Marc Shyne — 4L" />
 </p>
 
 <p align="center">
@@ -55,10 +55,10 @@ Wallet-native mining game with GPU infrastructure, upgrades, degradation and rep
   <img src="https://skillicons.dev/icons?i=ts,python,rust,react,nextjs,fastapi,postgres,redis,docker,git&theme=dark&perline=10" alt="TypeScript, Python, Rust, React, Next.js, FastAPI, PostgreSQL, Redis, Docker and Git" />
 </p>
 
-## One-life contribution game
+## Contribution game
 
 <p align="center">
-  <img src="./assets/contribution-game.svg" width="100%" alt="A contribution snake that eats, grows, bites its tail and stops on Game Over" />
+  <img src="./assets/contribution-game.svg" width="100%" alt="A contribution snake that eats, grows, bites its tail, shows Game Over and restarts" />
 </p>
 
 <p align="center">
