@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>Building real products across AI automation, commerce and on-chain systems.</strong>
+  <strong>Building AI workflows, commerce platforms and game systems end to end.</strong>
 </p>
 
 <p align="center">
@@ -17,9 +17,9 @@
 <tr>
 <td colspan="2" valign="top">
 
-### GOJO — private AI operations agent
+### GOJO — AI operations
 
-Production Telegram coding agent with persistent memory, guarded GitHub operations, sandboxed execution, multi-agent work and human approval gates.
+Private Telegram system for persistent tasks, shared memory, guarded GitHub work and approval-gated content publishing. Its lightweight publishing workflow is live; coding workflows are part of the wider system.
 
 `TypeScript` `Codex` `Telegram` `SQLite` `Linux sandboxing`
 
@@ -28,18 +28,38 @@ Production Telegram coding agent with persistent memory, guarded GitHub operatio
 <tr>
 <td width="50%" valign="top">
 
-### GMM STORE — commerce platform
+### [GMM STORE](https://gmmstore.com) — live commerce platform
 
-Full merch storefront: catalog, checkout, OTP accounts, order lifecycle, ₽/crypto payments and Telegram notifications.
+Merch storefront with catalog, checkout, customer accounts, order management, payment integrations and interactive 3D product views.
 
-`Next.js 16` `React 19` `Prisma` `PostgreSQL` `YooKassa`
+`Next.js` `React` `Prisma` `PostgreSQL` `3D`
+
+</td>
+<td width="50%" valign="top">
+
+### Fortune City — Telegram Mini App
+
+Contributed game UI, 3D previews and recoverable funding flows to a Telegram game with a server-side economy and Solana integration.
+
+`Next.js` `NestJS` `Prisma` `PostgreSQL` `Solana`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### Investment Core — local platform
+
+Reusable backend for separate game projects: isolated databases, configurable modules, server-authoritative actions, ledgers and an admin console. Three distinct games are running locally; external payment and deployment acceptance is still pending.
+
+`TypeScript` `Next.js` `PostgreSQL` `Prisma` `Docker`
 
 </td>
 <td width="50%" valign="top">
 
 ### HASHGRID — on-chain GPU economy
 
-Wallet-native mining game with GPU infrastructure, upgrades, degradation and repair, rewards, withdrawals, referrals and achievements.
+Wallet-connected game with GPU infrastructure, upgrades, repair, rewards, withdrawals and referrals.
 
 `Solana` `Anchor` `Rust` `React` `Node.js`
 
@@ -47,7 +67,14 @@ Wallet-native mining game with GPU infrastructure, upgrades, degradation and rep
 </tr>
 </table>
 
-<p align="center"><sub>These systems are private builds; the descriptions reflect working code, not public demo cards.</sub></p>
+<p align="center"><sub>Most source repositories are private. Project status is described above; the GMM Store link opens the public site.</sub></p>
+
+## Experience
+
+- **Full-stack products:** React/Next.js interfaces, TypeScript and Python services, PostgreSQL data models, integrations and deployment.
+- **AI and Telegram automation:** persistent jobs, shared memory, moderation workflows, guarded agent actions and human approval.
+- **Games and payments:** server-authoritative actions, transactional ledgers, recovery flows and Solana/Rust integrations.
+- **Interactive 3D:** Blender assets and browser-based viewers for commerce and game interfaces.
 
 ## Working set
 
