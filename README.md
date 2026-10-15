@@ -3,7 +3,8 @@
 </p>
 
 <p align="center">
-  <strong>Building AI workflows, commerce platforms and game systems end to end.</strong>
+  <strong>Building game backends, Telegram apps, AI workflows and commerce platforms.</strong><br />
+  <sub>Independent products. Reusable systems. From interface to infrastructure.</sub>
 </p>
 
 <p align="center">
@@ -17,11 +18,15 @@
 <tr>
 <td colspan="2" valign="top">
 
-### GOJO — AI operations
+### Investment Core — multi-project game platform
 
-Private Telegram system for persistent tasks, shared memory, guarded GitHub work and approval-gated content publishing. Its lightweight publishing workflow is live; coding workflows are part of the wider system.
+A shared backend and admin console for building distinct web and Telegram games. Each project has its own database, participants, economy and configurable mechanics; independent frontends connect through project-scoped APIs.
 
-`TypeScript` `Codex` `Telegram` `SQLite` `Linux sandboxing`
+Inventory, income-producing objects, quests, shops, referrals and seasons share server-side accounting and access controls. Three local game implementations exercise different loops: life simulation, contract-based RPG and squad combat.
+
+**Verified:** automated unit and integration checks, database recovery and production builds on GitHub Actions. **Next:** live payment integrations and deployment acceptance.
+
+`TypeScript` `NestJS` `Next.js` `PostgreSQL` `Prisma` `Docker`
 
 </td>
 </tr>
@@ -48,11 +53,11 @@ Contributed game UI, 3D previews and recoverable funding flows to a Telegram gam
 <tr>
 <td width="50%" valign="top">
 
-### Investment Core — local platform
+### GOJO — AI operations
 
-Reusable backend for separate game projects: isolated databases, configurable modules, server-authoritative actions, ledgers and an admin console. Three distinct games are running locally; external payment and deployment acceptance is still pending.
+Private Telegram system for persistent tasks, shared memory, guarded GitHub work and approval-gated content publishing. Its lightweight publishing workflow is live; coding workflows are part of the wider system.
 
-`TypeScript` `Next.js` `PostgreSQL` `Prisma` `Docker`
+`TypeScript` `Codex` `Telegram` `SQLite` `Linux sandboxing`
 
 </td>
 <td width="50%" valign="top">
@@ -73,7 +78,8 @@ Wallet-connected game with GPU infrastructure, upgrades, repair, rewards, withdr
 
 - **Full-stack products:** React/Next.js interfaces, TypeScript and Python services, PostgreSQL data models, integrations and deployment.
 - **AI and Telegram automation:** persistent jobs, shared memory, moderation workflows, guarded agent actions and human approval.
-- **Games and payments:** server-authoritative actions, transactional ledgers, recovery flows and Solana/Rust integrations.
+- **Game systems:** reusable mechanics, configurable economies, inventory, quests, referrals, shops and seasons.
+- **Accounting and reliability:** transactional ledgers, safe request retries, project isolation, database migrations and tested recovery.
 - **Interactive 3D:** Blender assets and browser-based viewers for commerce and game interfaces.
 
 ## Working set
