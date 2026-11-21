@@ -3,8 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>Building game backends, Telegram apps, AI workflows and commerce platforms.</strong><br />
-  <sub>Independent products. Reusable systems. From interface to infrastructure.</sub>
+  <strong>I build multiplayer games, Telegram apps and the backend systems they run on.</strong>
 </p>
 
 <p align="center">
@@ -22,11 +21,22 @@
 
 A shared backend and admin console for building distinct web and Telegram games. Each project has its own database, participants, economy and configurable mechanics; independent frontends connect through project-scoped APIs.
 
-Inventory, income-producing objects, quests, shops, referrals and seasons share server-side accounting and access controls. Three local game implementations exercise different loops: life simulation, contract-based RPG and squad combat.
+The admin console can copy a project's configuration into a clean sandbox for testing. Inventory, quests, shops and seasonal rewards share server-side accounting. Three local game implementations cover life simulation, contract-based RPG and squad combat. Recent life-sim work added event-driven goals, career progression and a player wallet.
 
-**Verified:** automated unit and integration checks, database recovery and production builds on GitHub Actions. **Next:** live payment integrations and deployment acceptance.
+**Verified:** PostgreSQL integration tests, database restores, safe retries after lost responses and production builds in CI. Live payments and deployment are pending.
 
 `TypeScript` `NestJS` `Next.js` `PostgreSQL` `Prisma` `Docker`
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+
+### Browser MMORPG — multiplayer gameplay and 3D client
+
+Contributed quests, progression, equipment effects and responsive HUD improvements to a real-time browser MMORPG. Prototyped a co-op escort event with server-driven encounters and contribution-based rewards, then tested it with multiple WebSocket clients.
+
+`TypeScript` `Node.js` `WebSocket` `Babylon.js` `Vite` `Vitest` `Playwright`
 
 </td>
 </tr>
@@ -74,13 +84,14 @@ Wallet-connected game with GPU infrastructure, upgrades, repair, rewards, withdr
 
 <p align="center"><sub>Most source repositories are private. Project status is described above; the GMM Store link opens the public site.</sub></p>
 
-## Experience
+## Engineering experience
 
-- **Full-stack products:** React/Next.js interfaces, TypeScript and Python services, PostgreSQL data models, integrations and deployment.
-- **AI and Telegram automation:** persistent jobs, shared memory, moderation workflows, guarded agent actions and human approval.
-- **Game systems:** reusable mechanics, configurable economies, inventory, quests, referrals, shops and seasons.
-- **Accounting and reliability:** transactional ledgers, safe request retries, project isolation, database migrations and tested recovery.
-- **Interactive 3D:** Blender assets and browser-based viewers for commerce and game interfaces.
+- **Real-time games** — WebSocket state sync, server-side combat and rewards, inventory and progression.
+- **Full-stack development** — React and Next.js interfaces, TypeScript and Python services, PostgreSQL data models and project-scoped APIs.
+- **Accounting and recovery** — transactional ledgers, idempotent writes, database migrations and recovery drills with populated databases.
+- **Testing and CI** — desktop and mobile browser tests, scripted multiplayer sessions, sustained-load tests and GitHub Actions.
+- **AI and Telegram automation** — persistent jobs, shared memory, moderation workflows and approval-gated agent actions.
+- **Browser 3D** — Babylon.js material and equipment effects, Blender asset workflows and interactive product viewers.
 
 ## Working set
 
