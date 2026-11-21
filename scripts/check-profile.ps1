@@ -1,14 +1,14 @@
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot
 $snakePath = Join-Path $root "assets/contribution-game.svg"
-$bannerPath = Join-Path $root "assets/trap-banner-vvs.webp"
+$bannerPath = Join-Path $root "assets/trap-banner-vvs-shine.webp"
 $readme = Get-Content -Raw -Encoding utf8 (Join-Path $root "README.md")
 $snake = Get-Content -Raw -Encoding utf8 $snakePath
 
 [xml]$snake | Out-Null
 $foodCount = [regex]::Matches($snake, 'id="food-\d+"').Count
 if ($snake -notmatch 'data-step-snake="true"' -or $snake -notmatch 'data-collision-shake="true"' -or $snake -notmatch 'calcMode="discrete"' -or $foodCount -ne 70 -or $snake -notmatch 'SELF COLLISION' -or $snake -notmatch 'SCORE 017500' -or $snake -notmatch 'dur="48s"') { throw "Cell snake cycle is incomplete" }
-if ($readme -notmatch "trap-banner-vvs\.webp" -or $readme -notmatch "contribution-game\.svg") { throw "README asset links are stale" }
+if ($readme -notmatch "trap-banner-vvs-shine\.webp" -or $readme -notmatch "contribution-game\.svg") { throw "README asset links are stale" }
 
 $bytes = [IO.File]::ReadAllBytes($bannerPath)
 $chunks = @()
