@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/trap-banner-4l.webp" width="100%" alt="Marc Shyne 4L: a white double cup overflowing with blue soda and ice beside a diamond chain" />
+  <img src="./assets/trap-banner-4l-enamel.webp" width="100%" alt="Marc Shyne 4L: a white double cup overflowing with blue soda and ice beside a diamond chain" />
 </p>
 
 <p align="center">
