@@ -102,7 +102,7 @@ Wallet-connected game with GPU infrastructure, upgrades, repair, rewards, withdr
 ## Contribution game
 
 <p align="center">
-  <img src="./assets/contribution-game.svg" width="100%" alt="A contribution snake that starts randomly, chases random food, grows to 218 cells, shakes after colliding with its tail, shows Game Over and restarts" />
+  <img src="./assets/contribution-game.svg" width="100%" alt="A chrome-headed blue snake collects diamonds for 250 points each, grows to 218 cells, hits its tail and restarts." />
 </p>
 
 <p align="center">

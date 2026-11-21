@@ -178,9 +178,10 @@ def build_svg() -> str:
         f'  <desc id="desc">A snake starts at a random cell, chases {FOOD_COUNT} random targets through an irregular grid route, grows to {8 + FOOD_COUNT * GROWTH_PER_FOOD} cells, shakes after a real tail collision, shows Game Over, and restarts.</desc>',
         '  <defs>',
         '    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#07111f"/><stop offset="1" stop-color="#02060d"/></linearGradient>',
-        '    <linearGradient id="body" x1="0" x2="1"><stop stop-color="#075cff"/><stop offset=".58" stop-color="#00aeef"/><stop offset="1" stop-color="#93f4ff"/></linearGradient>',
-        '    <radialGradient id="food"><stop stop-color="#ffffff"/><stop offset=".35" stop-color="#7debff"/><stop offset="1" stop-color="#075cff"/></radialGradient>',
-        '    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><rect width="22" height="22" rx="5" fill="#08111d" stroke="#132640" stroke-width="1"/></pattern>',
+        '    <linearGradient id="body" x2=".35" y2="1"><stop stop-color="#76deff"/><stop offset=".23" stop-color="#207bd9"/><stop offset=".62" stop-color="#174aaf"/><stop offset="1" stop-color="#071e50"/></linearGradient>',
+        '    <linearGradient id="chrome" x2=".2" y2="1"><stop stop-color="#fff"/><stop offset=".48" stop-color="#a6dcff"/><stop offset=".53" stop-color="#59789f"/><stop offset="1" stop-color="#d5f7ff"/></linearGradient>',
+        '    <g id="diamond"><path d="M-13 -4 -7 -10H7L13 -4 0 11Z" fill="#b1ddff" stroke="#effaff" stroke-width="1.4"/><path d="M-13 -4H13L0 11Z" fill="#6397e8"/><path d="M-5 -4 0 -10 5 -4 0 11Z" fill="#ecfaff"/><path d="M-13 -4 -7 -10 -5 -4Z" fill="white"/></g>',
+        '    <pattern id="grid" x="40" y="64" width="28" height="28" patternUnits="userSpaceOnUse"><rect width="22" height="22" rx="5" fill="#08111d" stroke="#132640" stroke-width="1"/></pattern>',
         '    <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>',
         '    <filter id="softGlow"><feGaussianBlur stdDeviation="7" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>',
         '  </defs>',
@@ -188,8 +189,9 @@ def build_svg() -> str:
         '  <rect x="24" y="16" width="1152" height="320" rx="20" fill="url(#panel)" stroke="#132640"/>',
         '  <text x="40" y="42" fill="#7debff" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="800" letter-spacing="3">MARC SHYNE // CONTRIBUTION SNAKE</text>',
         f'  <text x="1160" y="42" text-anchor="end" fill="#49627f" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" letter-spacing="2">LEVEL 08 // {int(STEP_SECONDS * 1000)} MS</text>',
-        '  <rect x="32" y="56" width="1136" height="224" rx="10" fill="url(#grid)" stroke="#173253"/>',
-        '  <rect x="32" y="56" width="1136" height="224" rx="10" fill="none" stroke="#00aeef" opacity=".18"><animate attributeName="opacity" values=".12;.3;.12" dur="4s" repeatCount="indefinite"/></rect>',
+        '  <rect x="32" y="56" width="1136" height="234" rx="10" fill="#050d17" stroke="#173253"/>',
+        f'  <rect x="{X0}" y="{Y0}" width="{(COLS-1)*PITCH+CELL}" height="{(ROWS-1)*PITCH+CELL}" fill="url(#grid)"/>',
+        '  <rect x="32" y="56" width="1136" height="234" rx="10" fill="none" stroke="#00aeef" opacity=".18"><animate attributeName="opacity" values=".12;.3;.12" dur="4s" repeatCount="indefinite"/></rect>',
         '  <g aria-label="Food appears one cell at a time">',
     ]
 
@@ -201,8 +203,7 @@ def build_svg() -> str:
         x, y = X0 + column * PITCH + CELL / 2, Y0 + row * PITCH + CELL / 2
         lines.extend([
             f'    <g id="food-{number}" opacity="0" transform="translate({x:g} {y:g})" filter="url(#glow)">',
-            '      <rect x="-7" y="-7" width="14" height="14" rx="4" fill="url(#food)" transform="rotate(45)"/>',
-            '      <circle r="11" fill="none" stroke="#7debff" opacity=".35"/>',
+            '      <use href="#diamond"/>',
             f'      {opacity_animation(previous, eaten)}',
             '    </g>',
         ])
@@ -235,7 +236,8 @@ def build_svg() -> str:
     lines.append('    </g>')
 
     transforms, rotations = [], []
-    last_direction = (1, 0)
+    head, neck = states[0][:2]
+    last_direction = (head[0] - neck[0], head[1] - neck[1])
     rotation_map = {(1, 0): 0, (0, 1): 90, (-1, 0): 180, (0, -1): 270}
     for index, (column, row) in enumerate(route):
         if index:
@@ -248,15 +250,28 @@ def build_svg() -> str:
     lines.extend([
         '    <g aria-label="Snake head" filter="url(#softGlow)">',
         f'    <animateTransform attributeName="transform" type="translate" values="{";".join(transforms)}" keyTimes="{step_times}" calcMode="discrete" dur="{TOTAL_SECONDS}s" repeatCount="indefinite"/>',
-        f'    <rect width="{CELL}" height="{CELL}" rx="7" fill="#d8fbff" stroke="#075cff" stroke-width="3"/>',
         '    <g>',
         f'      <animateTransform attributeName="transform" type="rotate" values="{";".join(rotations)}" keyTimes="{step_times}" calcMode="discrete" dur="{TOTAL_SECONDS}s" repeatCount="indefinite"/>',
-        '      <circle cx="16" cy="7" r="2" fill="#02060d"/><circle cx="16" cy="15" r="2" fill="#02060d"/>',
+        '      <path d="M23 11H28L31 8M28 11L31 14" fill="none" stroke="#73e4ff" stroke-width="1.7" stroke-linecap="round"/>',
+        '      <path d="M-1 3Q1 0 6 0L15 2 24 8Q27 11 24 14L15 20 6 22Q1 22 -1 19L2 11Z" fill="url(#chrome)" stroke="#7edaff" stroke-width="1.4"/>',
+        '      <path d="m11 4 8 4-7-1Zm0 14 8-4-7 1Z" fill="#082547"/>',
         '    </g>',
         f'    <animate attributeName="opacity" values="1;1;.25;.25;1" keyTimes="0;{fmt(collision_time / TOTAL_SECONDS)};{fmt((collision_time + .5) / TOTAL_SECONDS)};{fmt(overlay_end / TOTAL_SECONDS)};1" dur="{TOTAL_SECONDS}s" repeatCount="indefinite"/>',
         '    </g>',
         '  </g>',
     ])
+
+    for step in foods:
+        column, row = route[step]
+        start = fmt(step * STEP_SECONDS / TOTAL_SECONDS)
+        end = fmt((step * STEP_SECONDS + .23) / TOTAL_SECONDS)
+        times = f"0;{start};{end};1"
+        lines.extend([
+            f'  <circle cx="{X0 + column*PITCH + CELL//2}" cy="{Y0 + row*PITCH + CELL//2}" r="9" fill="none" stroke="#a5e7ff" stroke-width="1.8" opacity="0">',
+            f'    <animate attributeName="r" values="9;9;23;23" keyTimes="{times}" dur="{TOTAL_SECONDS}s" repeatCount="indefinite"/>',
+            f'    <animate attributeName="opacity" values="0;0;.9;0;0" keyTimes="0;{start};{fmt((step * STEP_SECONDS + .016) / TOTAL_SECONDS)};{end};1" dur="{TOTAL_SECONDS}s" repeatCount="indefinite"/>',
+            '  </circle>',
+        ])
 
     collision_column, collision_row = route[-1]
     cx = X0 + collision_column * PITCH + CELL / 2
@@ -272,9 +287,7 @@ def build_svg() -> str:
         '  <g aria-label="Live score" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="800" letter-spacing="2">',
     ])
 
-    score_marks = [(0, 0)] + [(step * STEP_SECONDS, index * POINTS_PER_FOOD) for index, step in enumerate(foods, 1) if index % 10 == 0]
-    if score_marks[-1][1] != len(foods) * POINTS_PER_FOOD:
-        score_marks.append((foods[-1] * STEP_SECONDS, len(foods) * POINTS_PER_FOOD))
+    score_marks = [(0, 0)] + [(step * STEP_SECONDS, index * POINTS_PER_FOOD) for index, step in enumerate(foods, 1)]
     for index, (start, score) in enumerate(score_marks):
         end = score_marks[index + 1][0] if index + 1 < len(score_marks) else overlay_start
         lines.extend([
